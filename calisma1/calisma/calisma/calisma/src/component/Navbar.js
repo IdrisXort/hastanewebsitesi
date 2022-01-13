@@ -80,153 +80,127 @@ class Navbar extends Component {
       ? " WhiteButton "
       : " NavbarButtonStyles";
 
-    // let btnclass = this.state.isVisibleTanitim
-    //   ? " WhiteButton "
-    //   : " NavbarButtonStyles";
-
     return (
       <div>
-        <nav className=" navbar navbar-expand-lg navbar-light Navbarcolor NavbarStyles ">
-          <div className=" container   ">
-            <div>
-              <a
-                className="navbar-brand text-light  "
-                href="http://ftm.firat.edu.tr/"
+        <nav className="  navbar  navbar-expand-lg  ">
+    
+          <button
+            className="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#KucukMenu"
+          ></button>
+          <span className="navbar-toggle-icon"> </span>
+          <div
+            className=" collapse navbar-collapse NavbarStyles nav justify-content-end "
+            id="KucukMenu"
+          >
+            <img className="brand" src="hastanelogo2.png" height={90} ></img>
+            <ul className=" navbar-nav  ">
+              <li
+                className="nav-item"
+                role="button"
+                className={btnclass}
+                onMouseEnter={this.onClickGosterTanitim.bind(this, true)}
+                // onMouseLeave={this.onClickGosterTanitim.bind(this, false)}
               >
-                <img
-                  className="   BrandPadding "
-                  src="hastanelogo2.png"
-                  height=" 80"
-                ></img>
-              </a>
-            </div>
+                Tanitim
+                {isVisibleTanitim ? (
+                  <ul>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                  </ul>
+                ) : null}
+              </li>
+              <li
+                role="button"
+                className={btnclass1}
+                onMouseEnter={this.onClickGosterYönetim.bind(this, true)}
+                onMouseLeave={this.onClickGosterYönetim.bind(this, false)}
+              >
+                Yönetim
+                {isVisibleYönetim ? (
+                  <ul>
+                    <li> idris</li> <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                  </ul>
+                ) : null}
+              </li>
+              <li
+                role="button"
+                className={btnclass2}
+                onMouseEnter={this.onClickGosterBölümler.bind(this, true)}
+                onMouseLeave={this.onClickGosterBölümler.bind(this, false)}
+              >
+                Bölümler
+                {isVisibleBölümler ? (
+                  <ul>
+                    <li> idris</li> <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                    <li>Rektörümüz</li>
+                  </ul>
+                ) : null}
+              </li>
+              <li
+                role="button"
+                className={btnclass3}
+                onMouseEnter={this.onClickGosterDoktorlar.bind(this, true)}
+                onMouseLeave={this.onClickGosterDoktorlar.bind(this, false)}
+              >
+                Doktorlar
+                {isVisibleDoktorlar ? (
+                  <ul>
+                    <li> reşit</li>
+                  </ul>
+                ) : null}
+              </li>
+              <li
+                role="button"
+                className={btnclass4}
+                onMouseLeave={this.onClickGosterIletisim.bind(this, false)}
+                onMouseEnter={this.onClickGosterIletisim.bind(this, true)}
+              >
+                İletişim
+                {isVisibleIletisim ? (
+                  <ul>
+                    <li> enes</li>
+                  </ul>
+                ) : null}
+              </li>
+            </ul>
 
-            <div
-              className="   collapse.navbar-collapse NavbarDiv   "
-              id="navbarSupportedContent"
-            >
-              <ul className=" navbar-nav mr-auto NavbarStyles  ">
-                <li className="nav-item dropdown">
-                  <div
-                    role="button"
-                    className="nav-link dropdown-toggle  "
-                    data-bs-toggle="dropdown"
-                    className={btnclass}
-                    onMouseEnter={this.onClickGosterTanitim.bind(this, true)}
-                    onMouseLeave={this.onClickGosterTanitim.bind(this, false)}
-                  >
-                    Tanıtım
-                  </div>
-                  {isVisibleTanitim ? (
-                    <div>
-                      <ul>
-                        <li> hasan</li>
-                      </ul>
-                    </div>
-                  ) : null}
-                </li>
-                <li className="nav-item dropdown">
-                  <div
-                    
-                    role="button"
-                    className=" nav-link dropdown-toggle  "
-                    data-bs-toggle="dropdown"
-                    className={btnclass1}
-                    onMouseEnter={this.onClickGosterYönetim.bind(this, true)}
-                    onMouseLeave={this.onClickGosterYönetim.bind(this, false)}
-                  >
-                    Yönetim
-                  </div>
-                  {isVisibleYönetim ? (
-                    <div>
-                      <ul>
-                        <li> idris</li>
-                      </ul>
-                    </div>
-                  ) : null}
-                </li>
-                <li className="nav-item dropdown">
-                  <div
-                    role="button"
-                    className="nav-link dropdown-toggle  "
-                    data-bs-toggle="dropdown"
-                    className={btnclass2}
-                    onMouseEnter={this.onClickGosterBölümler.bind(this, true)}
-                    onMouseLeave={this.onClickGosterBölümler.bind(this, false)}
-                  >
-                    Bölümler
-                  </div>
-                  {isVisibleBölümler ? (
-                    <div>
-                      <ul>
-                        <li> idris</li>
-                      </ul>
-                    </div>
-                  ) : null}
-                </li>
-                <li className="nav-item dropdown">
-                  <div
-                    role="button"
-                    className="nav-link dropdown-toggle  "
-                    data-bs-toggle="dropdown"
-                    className={btnclass3}
-                    onMouseEnter={this.onClickGosterDoktorlar.bind(this, true)}
-                    onMouseLeave={this.onClickGosterDoktorlar.bind(this, false)}
-                  >
-                    Doktorlar
-                  </div>
-                  {isVisibleDoktorlar ? (
-                    <div>
-                      <ul>
-                        <li> reşit</li>
-                      </ul>
-                    </div>
-                  ) : null}
-                </li>
-                <li className="nav-item dropdown">
-                  <div
-                    role="button"
-                    className="nav-link dropdown-toggle  "
-                    data-bs-toggle="dropdown"
-                    className={btnclass4}
-                    onMouseLeave={this.onClickGosterIletisim.bind(this, false)}
-                    onMouseEnter={this.onClickGosterIletisim.bind(this, true)}
-                  >
-                    İletişim
-                  </div>
-                   {isVisibleIletisim ? (
-                    <div>
-                      <ul>
-                        <li> enes</li>
-                      </ul>
-                    </div>
-                  ) : null} 
-
-                </li>
-              </ul>
-            </div>
-
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Arama"
-                  aria-label="Arama"
-                ></input>
-                <button
-                  className="btn btn-outline-light text-light"
-                  type="submit"
-                >
-                  Arama
-                </button>
-              </form>
-            </div>
+            <form className="d-flex">
+              <input
+                className="form-control me-2 "
+                type="search"
+                placeholder="Arama"
+                aria-label="Arama"
+              ></input>
+              <button className="btn btn-outline-light text-red" type="submit">
+                Arama
+              </button>
+            </form>
           </div>
-        </nav>
+        </nav>{" "}
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+          crossorigin="anonymous"
+        ></script>
       </div>
     );
   }

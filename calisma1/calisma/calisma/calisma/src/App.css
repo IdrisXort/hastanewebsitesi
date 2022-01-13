@@ -1,28 +1,32 @@
-.Navbarcolor {
-  background-color: #850432;
-}
+.brand {
+margin-right: 20%;
 
-.BrandPadding {
-  padding: 1px 50px;
 }
-
 .NavbarStyles {
   height: 90px;
+  background-color: #850432;
+  padding-right: 15%;
+}
 
-}
-.NavbarDiv {
-  height: 90px;
-  padding: 0px 60px;
-}
+
 .WhiteButton {
   color: #850432;
   background-color: #ececf1;
   padding: 33px 10px;
+   height: 90px;
+  width: 90px;
 }
 .NavbarButtonStyles {
   color: #ececf1;
   background-color: #850432;
   padding: 33px 10px;
+  height: 90px;
+  width: 90px;
+}
+
+.AramaButonuRenk {
+color: #850432;
+
 }
 
 
